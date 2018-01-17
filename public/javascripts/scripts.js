@@ -1,11 +1,15 @@
+// Site controls: //
+
 $(document).ready(function() {
-    $("#responseTitle").text("");
-    $("#responseBody").text("");
-    $("#responseIntro").css("border-style", "none");
-    $("#responseIntro").click(function( event ) {
-        event.preventDefault();
-        $("#responseIntro").hide();
-        console.log()
+    var responseClone = $("#response").clone();
+    $("#response").hide();
+    $('.title').click(function( event ) {
+        getContent('5a5fd8d794ffb67495fa8d77');
+        $("#responseIntro").css("display", "none")
+    });
+    $(".nav.hide").click(function( event ) {
+        $(this).parent().parent().slideUp(400);
+        $("#responseTitle").css("padding-top", "0", "margin", "0")
     }); 
 });
 
@@ -36,16 +40,13 @@ function addContent() {
 
 function getContent() {
     // CLEAR CONTENT //
-    $("#responseIntro").html("");
-    $("#responseTitle").text("");
-    $("#responseBody").text("");
-
+    $("#response").hide();
+    $("#response > div").text("");
     // CAPTURE THE UNIQUE ID //
     var ID = arguments[0]
 
-    var mainURL = window.location.href
-
     // TURN ID INTO API URL //
+    var mainURL = window.location.href
     var get_fullURL = mainURL + 'content/' + ID;
 
     // SEND GET REQUEST TO API //
@@ -61,22 +62,26 @@ function getContent() {
     var introMarkup = markdown.toHTML(response.intro);
     var splitIntro = introMarkup.split(/\n/);
     var div = document.getElementById('responseIntro');
-    $("#responseIntro").html('<h1 class="introh1">Background</h1><br><button id="hideIntro">hide</a>');
+    $("#responseIntro").html('<div><h1 class="introh1">Background</h1><button class="nav hide">| hide</button></div>');
     for (para of splitIntro) {
         div.innerHTML += `<p>${para}</p>`;
+    //make hide button
+    $(".nav.hide").click(function( event ) {
+        $(this).parent().parent().slideUp(400);
+        $("#responseTitle").css("padding-top", "0", "margin", "0")
+    }); 
     }
 
-    // PRINT BODY TO DIV //
+    // PRINT CONTENT TO DIV //
+    $("#responseIntro").css("border-style", "solid");
+    $("#responseTitle").text(response.title);
     var bodyMarkup = markdown.toHTML(response.body);
     var splitBody = bodyMarkup.split(/\n/);
     var div = document.getElementById('responseBody');
     for (para of splitBody) {
         div.innerHTML += `<p>${para}</p>`;
     }
-
-    // PRINT TITLE TO DIV //
-    $("#responseIntro").css("border-style", "solid");
-    $("#responseTitle").text(response.title);
+    $("#response").fadeTo(700, 1);
 }
 
 // HELP FORMATTING (Uses OP-API) //

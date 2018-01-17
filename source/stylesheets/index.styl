@@ -24,6 +24,7 @@
 // LAYOUT
 
 .title
+    opacity 0.6
     font-weight 700
     font-style italic
     display table-cell
@@ -35,13 +36,14 @@
     text-align center
     color #84cff6
     text-rendering optimizeLegibility
+    &:hover
+        opacity 1
+        cursor pointer
 
 .wrapper
     min-height 100vh
     display flex
     flex-direction column
-
-// MAKE HEADER SMALLER
 
 .header
     height: 100px;
@@ -78,6 +80,12 @@ button.nav
     cursor pointer
     text-rendering optimizeLegibility
 
+.hide
+    line-height 2.5
+    &:hover
+        outline none
+        font-weight 500
+
 .cd
     &:focus
         outline none
@@ -113,3 +121,13 @@ button.nav
     margin-left 5%
     padding-top 8px
 
+#responseIntro
+    opacity 0.7
+    border-style solid
+    border-color #cccccc
+    border-width 4px
+    font-size 14px
+    padding 3%
+    margin bottom 3%
+    &:hover
+        opacity 1

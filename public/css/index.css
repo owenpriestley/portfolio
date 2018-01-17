@@ -29,6 +29,7 @@
   color: #000102;
 }
 .title {
+  opacity: 0.6;
   font-weight: 700;
   font-style: italic;
   display: table-cell;
@@ -40,6 +41,10 @@
   text-align: center;
   color: #84cff6;
   text-rendering: optimizeLegibility;
+}
+.title:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 .wrapper {
   min-height: 100vh;
@@ -81,6 +86,13 @@ button.nav {
   cursor: pointer;
   text-rendering: optimizeLegibility;
 }
+.hide {
+  line-height: 2.5;
+}
+.hide:hover {
+  outline: none;
+  font-weight: 500;
+}
 .cd:focus {
   outline: none;
   color: #50a471;
@@ -112,4 +124,16 @@ button.nav {
   order: 3;
   margin-left: 5%;
   padding-top: 8px;
+}
+#responseIntro {
+  opacity: 0.7;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 4px;
+  font-size: 14px;
+  padding: 3%;
+  margin: bottom 3%;
+}
+#responseIntro:hover {
+  opacity: 1;
 }
