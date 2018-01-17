@@ -2,7 +2,11 @@ $(document).ready(function() {
     $("#responseTitle").text("");
     $("#responseBody").text("");
     $("#responseIntro").css("border-style", "none");
-    console.log('clearCSS');
+    $("#responseIntro").click(function( event ) {
+        event.preventDefault();
+        $("#responseIntro").hide();
+        console.log()
+    }); 
 });
 
 function addContent() {
@@ -57,7 +61,7 @@ function getContent() {
     var introMarkup = markdown.toHTML(response.intro);
     var splitIntro = introMarkup.split(/\n/);
     var div = document.getElementById('responseIntro');
-    $("#responseIntro").html('<h1 class="introh1">Background</h1>');
+    $("#responseIntro").html('<h1 class="introh1">Background</h1><br><button id="hideIntro">hide</a>');
     for (para of splitIntro) {
         div.innerHTML += `<p>${para}</p>`;
     }
