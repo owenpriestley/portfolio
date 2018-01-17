@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build-css": "stylus source/stylesheets/ -o public/css",
+    "watch-css": "stylus source/stylesheets/ -o public/css -w",
+    "clean": "rm -rf public/css && mkdir -p public/css",
+    "build": "npm run clean && npm run build-css",
+    "dev": "npm run clean && npm run watch-css & nodemon server -e js,pug",
+    "start": "node server"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jstransformer-markdown-it": "^2.0.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.14.10",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "stylus": "^0.53.0",
+    "mongodb": "^2.2.31"
+  }
+}

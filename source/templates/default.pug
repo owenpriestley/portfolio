@@ -1,0 +1,50 @@
+doctype html
+html
+body
+  head
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/content.css')
+    script(src="/javascripts/scripts.js")
+    script(src="/javascripts/markdown.min.js")
+    
+.wrapper
+  header.header
+    .title OWEN PRIESTLEY
+  section.content
+    .columns
+      main.main
+        block content
+      aside.sidebar-first
+        .nav-head
+          .green CONTENT DESIGN
+        ul.nav
+          li
+            button.nav.cd(onclick="getContent('5a5e6179bf05985dcd5476dd')") Complain to your energy supplier
+          li
+            button.nav.cd(onclick="getContent('5a5e28b561576e5af8891ded')") Another example (intro)
+          li
+            button.nav.cd(onclick="getContent()") And a third!
+        .nav-head 
+          .orange TECHNICAL WRITING
+        ul.nav
+          li
+            button.nav.tw(onclick="getContent('5a5cff2969142d55e2448d2a')") Complain to your energy supplier
+          li
+            button.nav.tw(value="BYE!" onclick="getContent()") Another example
+          li
+            button.nav.tw(onclick="getContent()") And a third!
+        .nav-head 
+          .blue WEB DEVELOPMENT
+        ul.nav
+          li
+            button.nav.wd(onclick="getContent('5a5cff2969142d55e2448d2a')") Complain to your energy supplier
+          li
+            button.nav.wd(value="BYE!" onclick="getContent()") Another example
+          li
+            button.nav.wd(onclick="getContent()") And a third!
+
+      // right sidebar
+      aside.sidebar-second
+  // footer space
+  footer.footer
