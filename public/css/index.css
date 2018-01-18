@@ -98,15 +98,27 @@ button.nav {
   color: #50a471;
   font-weight: 500;
 }
+.cd:hover {
+  outline: none;
+  color: #50a471;
+}
 .tw:focus {
   outline: none;
   color: #e3a731;
   font-weight: 500;
 }
+.tw:hover {
+  outline: none;
+  color: #e3a731;
+}
 .wd:focus {
   outline: none;
   color: #0b486b;
   font-weight: 500;
+}
+.wd:hover {
+  outline: none;
+  color: #0b486b;
 }
 .main {
   flex: 1;

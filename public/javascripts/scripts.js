@@ -5,10 +5,11 @@ $(document).ready(function() {
     $("#response").hide();
     $('.title').click(function( event ) {
         getContent('5a5fd8d794ffb67495fa8d77');
-        $("#responseIntro").css("display", "none")
+        $("#responseIntro").css("display", "none");
+        $("h1").css("padding-top", "0px")
     });
     $(".nav.hide").click(function( event ) {
-        $(this).parent().parent().slideUp(400);
+        $(this).parent().slideUp(400);
         $("#responseTitle").css("padding-top", "0", "margin", "0")
     }); 
 });
@@ -41,7 +42,7 @@ function addContent() {
 function getContent() {
     // CLEAR CONTENT //
     $("#response").hide();
-    $("#response > div").text("");
+    $("#responseTitle, #responseBody, #responseIntroBody").text("");
     // CAPTURE THE UNIQUE ID //
     var ID = arguments[0]
 
@@ -61,13 +62,12 @@ function getContent() {
     // PRINT INTRO TO DIV //
     var introMarkup = markdown.toHTML(response.intro);
     var splitIntro = introMarkup.split(/\n/);
-    var div = document.getElementById('responseIntro');
-    $("#responseIntro").html('<div><h1 class="introh1">Background</h1><button class="nav hide">| hide</button></div>');
+    var div = document.getElementById('responseIntroBody');
     for (para of splitIntro) {
         div.innerHTML += `<p>${para}</p>`;
     //make hide button
     $(".nav.hide").click(function( event ) {
-        $(this).parent().parent().slideUp(400);
+        $(this).parent().slideUp(400);
         $("#responseTitle").css("padding-top", "0", "margin", "0")
     }); 
     }
@@ -81,6 +81,7 @@ function getContent() {
     for (para of splitBody) {
         div.innerHTML += `<p>${para}</p>`;
     }
+    $("#responseIntro").css("display", "block");
     $("#response").fadeTo(700, 1);
 }
 
