@@ -26,7 +26,7 @@ app.get('/content/:id', (req, res) => {
 app.put('content/:id', (req, res) => {
     const id = req.params.id;
     const details = { '_id': new ObjectID(id) };
-    const content = { category: req.body.category, intro: req.body.intro, title: req.body.title, body: req.body.body };
+    const content = { category: req.body.category, intro: req.body.intro, title: req.body.title, body: req.body.body, place: req.body.place, orig: req.body.orig };
     db.collection('content').update(details, content, (err, item) => {
       if (err) {
         res.send({'error':'An error has occurred'});
@@ -50,7 +50,7 @@ app.delete('content/:id', (req, res) => {
 
 //Add some content (POST)
 app.post('/content', (req, res) => {
-const content = { category: req.body.category, intro: req.body.intro, title: req.body.title, body: req.body.body  };
+const content = { category: req.body.category, intro: req.body.intro, title: req.body.title, body: req.body.body, place: req.body.place, orig: req.body.orig  };
 db.collection('content').insert(content, (err, result) => {
 if (err) { 
    res.send({ 'error': 'An error has occurred' }); 
