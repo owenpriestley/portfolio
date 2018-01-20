@@ -85,43 +85,50 @@ button.nav
     &:hover
         outline none
         font-weight 500
-
-.cd
-    &:focus
-        outline none
-        color #50a471
-        font-weight 500
+.nav .cd
+    outline none
     &:hover
-        outline none
         color #50a471
 
-.tw
-    &:focus
-        outline none
-        color #e3a731
-        font-weight 500
+.nav .selected .cd
+    outline none
+    color #50a471
+    font-weight 500
+
+.nav .tw
     &:hover
         outline none
         color #e3a731
 
-.wd
-    &:focus
-        outline none
-        color #0B486B
-        font-weight 500
+.nav .selected .tw 
+    outline none
+    color #e3a731
+    font-weight 500
+
+.nav .wd
     &:hover
         outline none
         color #0B486B
+
+.nav .selected .wd
+    outline none
+    color #0B486B
+    font-weight 500
 
 .main
     flex 1
     order 2
-
+    width 60%
+    max-width 60%
+    
 .sidebar-first
     width 20%
     order 1
     margin-left 5%
     padding-top 8px
+
+.nav li.selected
+    list-style square
 
 .sidebar-second
     color #f3a551
@@ -140,3 +147,7 @@ button.nav
     margin bottom 3%
     &:hover
         opacity 1
+
+img {
+    max-width: 100%
+}
