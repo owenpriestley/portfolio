@@ -1,4 +1,4 @@
-// Site controls: //
+// Site controls //
 $(document).ready(function() {
     $("#response").hide();
     $('.title').click(function( event ) {
