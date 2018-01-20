@@ -68,6 +68,15 @@ h3 {
   font-size: 21px;
 }
 a {
-  text-decoration: underline;
-  color: #000102;
+  text-decoration: none;
+  color: #0b486b;
+}
+a:hover {
+  color: #84cff6;
+}
+a:focus {
+  color: #f3a551;
+}
+a:active {
+  color: #f3a551;
 }
