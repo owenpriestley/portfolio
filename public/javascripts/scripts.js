@@ -22,6 +22,20 @@ $(document).ready(function() {
             listElement.addClass('selected');
         }
     })
+
+    $(".nav button.nav.wd").on('click', function(){
+        var listElement = $(this).parent();
+        var ID = $(this).data('contentid')
+        getContent(ID);
+        if ($(".nav li").hasClass('selected')){
+            $(".nav li").removeClass('selected');
+            listElement.addClass('selected');
+        } else {
+            listElement.addClass('selected');
+        }
+        $("#responseIntro").hide();
+        $("#responseBody").append("<p class='note'>Note: If it takes a while to load, give it a moment. The deployment is probably frozen.</p>");
+    })
     
 });
 
@@ -30,7 +44,6 @@ function getContent(ID) {
     $("#response").hide();
     $("#responseTitle").css("padding-top", "7%");
     $("#responseTitle, #responseBody, #responseIntroBody").text("");
-
 
     // TURN ID INTO API URL //
     var mainURL = window.location.href
