@@ -34,7 +34,7 @@ $(document).ready(function() {
             listElement.addClass('selected');
         }
         $("#responseIntro").hide();
-        $("#responseBody").append("<p class='note'>Note: If it takes a while to load, give it a moment. The deployment is probably frozen.</p>");
+        $("#responseBody").append("<p class='note'><strong class='notehead'>NOTE</strong></br>If it takes a while to load, the deployment is probably frozen. You'll just need to give it a moment to defrost.</p>");
     })
     
 });
@@ -77,35 +77,4 @@ function getContent(ID) {
     }
     $("#responseIntro").css("display", "block");
     $("#response").fadeTo(700, 1);
-}
-
-// HELP FORMATTING (Uses OP-API) //
-
-function getHelp() {
-    var get_fullURL = window.location.href + "content/59df998b1538bcd9a186aa36";
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", get_fullURL, false);
-    xhttp.setRequestHeader("Content-type", "x-www-form-urlencoded");
-    xhttp.send()
-    var response = JSON.parse(xhttp.responseText);
-    var bodyMarkup = markdown.toHTML(response.body);
-    var splitBody = bodyMarkup.split(/\n/);
-    console.log(splitBody);
-    var divBody = document.getElementById('responseBody');
-    for (para of splitBody) {
-        divBody.innerHTML += `<p>${para}</p>`;
-    }
-    var divTitle = document.getElementById('responseTitle');
-    divTitle.innerHTML += response.title;
-    //    $("h2.responseTitle").text(response.title);    
-}
-
-function parsePostcode() {
-    var part1 = $('#postCodeA').val()
-    var part2 = $('#postCodeB').val()
-    var userData = part1.replace(/\s+/g, '') + '+' + part2.replace(/\s+/g, '')
-    var checkerURL = 'http://www.powercut105.com/FindOperator?Postcode=' //n7+8ha#dno
-    var checkPostcode = checkerURL + userData + '#dno'
-    window.open(checkPostcode);
-
 }
