@@ -35,11 +35,11 @@
   display: table-cell;
   vertical-align: middle;
   font-size: 40px;
-  border: 6px solid #84cff6;
+  border: 6px solid #0b486b;
   height: 2.5em;
   width: 2.5em;
   text-align: center;
-  color: #84cff6;
+  color: #0b486b;
   text-rendering: optimizeLegibility;
 }
 .title:hover {
@@ -148,6 +148,12 @@ button.nav {
   order: 3;
   margin-left: 5%;
   padding-top: 8px;
+  opacity: 0.6;
+}
+.sidebar-second:hover {
+  transition: 0.3s;
+  opacity: 1;
+  cursor: pointer;
 }
 #responseIntro {
   border-style: solid;
