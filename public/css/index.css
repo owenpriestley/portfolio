@@ -36,13 +36,14 @@
   vertical-align: middle;
   font-size: 40px;
   border: 6px solid #84cff6;
-  height: 60px;
-  width: 350px;
+  height: 2.5em;
+  width: 2.5em;
   text-align: center;
   color: #84cff6;
   text-rendering: optimizeLegibility;
 }
 .title:hover {
+  transition: 0.3s;
   opacity: 1;
   cursor: pointer;
 }
@@ -73,10 +74,8 @@
   list-style-type: none;
 }
 .nav-head {
-  font-size: 15px;
+  font-size: 2em;
   font-weight: 700;
-  font-style: italic;
-  color: #e3a731;
 }
 button.nav {
   border: none;
@@ -85,6 +84,7 @@ button.nav {
   padding: 0;
   cursor: pointer;
   text-rendering: optimizeLegibility;
+  background: no-repeat;
 }
 .hide {
   line-height: 2.5;
@@ -129,10 +129,15 @@ button.nav {
   max-width: 60%;
 }
 .sidebar-first {
-  width: 20%;
-  order: 1;
+  width: 21.5em;
+  opacity: 0.6;
+  padding-left: 1em;
+  padding-top: 1em;
   margin-left: 5%;
-  padding-top: 8px;
+}
+.sidebar-first:hover {
+  transition: 0.3s;
+  opacity: 1;
 }
 .nav li.selected {
   list-style: square;
