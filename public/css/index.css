@@ -73,6 +73,15 @@
   line-height: 170%;
   list-style-type: none;
 }
+.nav-main {
+  margin-right: 5%;
+  margin-top: 5%;
+  border-style: solid;
+  padding-left: 1em;
+  padding-top: 1em;
+  color: #0b486b;
+  border-width: 5px;
+}
 .nav-head {
   font-size: 2em;
   font-weight: 700;
@@ -127,13 +136,14 @@ button.nav {
   order: 2;
   width: 60%;
   max-width: 60%;
+  padding-right: 5%;
+  padding-top: 5%;
 }
 .sidebar-first {
-  width: 21.5em;
+  width: 15%;
   opacity: 0.6;
-  padding-left: 1em;
-  padding-top: 1em;
-  margin-left: 5%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 .sidebar-first:hover {
   transition: 0.3s;
@@ -143,12 +153,13 @@ button.nav {
   list-style: square;
 }
 .sidebar-second {
+  padding-top: 2%;
+  padding-right: 2%;
   color: #f3a551;
   width: 20%;
   order: 3;
-  margin-left: 5%;
-  padding-top: 8px;
   opacity: 0.6;
+  height: 30%;
 }
 .sidebar-second:hover {
   transition: 0.3s;
