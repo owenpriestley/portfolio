@@ -34,7 +34,7 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
+  font-size: 1em;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
@@ -50,17 +50,19 @@ body {
 h1 {
   padding-top: 7%;
   margin: 0;
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 2em;
   color: #000102;
+  letter-spacing: 0.005em;
 }
 .introh1 {
-  font-size: 21px;
+  font-size: 4em;
   padding: 0;
-  font-weight: 500;
+  font-weight: 700;
   float: left;
   padding-right: 10px;
   opacity: 0.9;
+  letter-spacing: 0.005em;
   color: #000;
 }
 h1,
@@ -69,23 +71,24 @@ h3 {
   color: #0b486b;
 }
 h2 {
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: 0.005em;
 }
 h3 {
-  font-weight: 600;
-  font-size: 21px;
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 0.005em;
 }
 a {
   text-decoration: none;
-  color: #0b486b;
+  color: #000;
+  border-bottom: #0b486b 1px solid;
+  transition: 0.3s;
+}
+a:visited {
+  color: #000;
 }
 a:hover {
   color: #84cff6;
-}
-a:focus {
-  color: #f3a551;
-}
-a:active {
-  color: #f3a551;
 }
