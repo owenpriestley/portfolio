@@ -1,3 +1,5 @@
+//TEST HIDING NAV: https://codepen.io/owiewio/pen/jZpvbe //
+
 // Site controls //
 $(document).ready(function() {
     $("#response").hide();
@@ -13,8 +15,8 @@ $(document).ready(function() {
 
     $(".nav button.nav").on('click', function(){
         var listElement = $(this).parent();
-        var ID = $(this).data('contentid')
-        getContent(ID);
+        var link = $(this).data('url')
+        location.href = link;
         if ($(".nav li").hasClass('selected')){
             $(".nav li").removeClass('selected');
             listElement.addClass('selected');
