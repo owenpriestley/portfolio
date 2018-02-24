@@ -2,6 +2,10 @@
 
 // Site controls //
 $(document).ready(function() {
+    $("#hide").click(function( event ) {
+        $(".nav-main").animate({width:'toggle'},350);
+      });      
+
     $("#response").hide();
     $('.title').click(function( event ) {
         getContent('5a6341dbc443548d81bcf727');
