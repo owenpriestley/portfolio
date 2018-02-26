@@ -22,7 +22,6 @@
     color #000102
 
 .title
-    opacity 0.6
     font-weight 700
     font-style italic
     display table-cell
@@ -57,48 +56,27 @@ header
     display flex
     flex 1
 
-.nav
-    font-size 1em
-    color #000102
-    line-height 220%
-    list-style-type none
-
-#hide
-    font-family Open sans
-    font-size 2em
-    font-style italic
-    font-weight 700
-    transform rotate(90deg)
-    transform-origin left top 0
-    float left
-    height auto
-    width 390px
+#nav-main
     border-style solid
-    text-align center
-    margin-left 376px
-    margin-top 0.59em
-    position fixed
-    border-width 5px
-    border-color #0b486b
-
-hide:hover
-    cursor col-resize
-    background-color green
-
-.nav-main
-    margin-right 15%
-    border-style solid
-    padding-right 10%
-    padding-top 1em
+    padding-right 30px
+    padding-top 0.7em
     color: #0b486b
     border-width 5px
     text-align right
     width 275px
     float right
     margin-top 5%
+    overflow hidden
     
+.nav
+    font-size 1em
+    color #000102
+    line-height 220%
+    list-style-type none
+    text-align right
+
 .nav-head
-    font-size 2em
+    font-size 1.5em
     font-weight 700
     letter-spacing 0.005em
     text-align right
@@ -112,38 +90,25 @@ button.nav
     cursor pointer
     text-rendering optimizeLegibility
     background no-repeat
-
-.nav .cd
     outline none
     border-bottom #50a471 2px solid
-    padding-top 12px
+    margin-top 10%
     &:hover
         color #50a471
+        cursor pointer
 
-.nav .selected .cd
-    outline none
-    color #50a471
-    font-weight 500
-
-.nav .tw
+#hide
+    font-size 2.4em
+    font-weight 700
+    height 1em
+    width 1em
+    text-align center
+    margin-top 0.59em
+    position absolute
+    color #f3a551
     &:hover
-        outline none
-        color #e3a731
-
-.nav .selected .tw 
-    outline none
-    color #e3a731
-    font-weight 500
-
-.nav .wd
-    &:hover
-        outline none
-        color #0B486B
-
-.nav .selected .wd
-    outline none
-    color #0B486B
-    font-weight 500
+        color #50a471
+        cursor pointer
 
 .main
     flex 1
@@ -163,14 +128,11 @@ button.nav
         transition 0.3s
         opacity 1
 
-.nav li.selected
-    list-style square
-
 .sidebar-second
     padding-top 2%
-    padding-right 2%
+    margin-right 3%
     color #f3a551
-    width 30%
+    width 305px
     order 3
     opacity 0.6
     height 30%
@@ -178,7 +140,6 @@ button.nav
     &:hover
       transition 0.3s
       opacity 1
-      cursor pointer
 
 #responseIntro
     border-style solid
@@ -188,8 +149,59 @@ button.nav
     border-width 4px
     padding 3%
     margin bottom 3%
-    
 
-img {
-    max-width: 100%
-}
+.stats
+    border solid 2px blue
+
+.row
+    block-sizing border-box
+    display block
+    overflow hidden
+    background-color #0b486b
+
+.column
+    overflow hidden
+    width 27%
+    box-sizing border-box
+    float left
+    margin-left 2%
+
+.sml-column
+    border-left dotted 1px white
+    width 70%
+    float right
+    padding-bottom 20px
+
+.sml-column h3
+    padding-left 20px
+    padding-top 12px
+    color white
+    
+.sml-column li
+    padding-top 8px
+    padding-bottom 8px
+    color white
+
+
+.stat h3
+    color white
+    font-size 3em
+    font-weight 700
+    line-height 0.3em
+    margin 0
+
+.stat p
+    color white
+    font-size 1em
+    line-height 1.25em
+    margin-bottom 1.25em
+    margin-top 1.25em
+    margin-left 0.2em
+
+.standout
+    border solid 1px #0B486B
+    padding 10px
+
+.standout h3
+    margin-left 5px
+    margin-top 0

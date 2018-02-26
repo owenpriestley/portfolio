@@ -5,6 +5,9 @@ var express = require('express')
   //pages
   , homepage = require('pug').compileFile(__dirname + '/source/templates/homepage.pug')
   , benefits = require('pug').compileFile(__dirname + '/source/templates/benefits.pug')
+  , priorityservices = require('pug').compileFile(__dirname + '/source/templates/priorityservices.pug')
+  , migrations = require('pug').compileFile(__dirname + '/source/templates/migrations.pug')
+
 
 // API BUSINESS
 const MongoClient = require('mongodb').MongoClient;
@@ -43,7 +46,25 @@ app.get('/', function (req, res, next) {
 
 app.get('/benefits', function (req, res, next) {
   try {
-    var html = benefits({ title: 'Benefits' })
+    var html = benefits({ title: 'Creating user friendly benefits advice' })
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
+})
+
+app.get('/priorityservices', function (req, res, next) {
+  try {
+    var html = priorityservices({ title: 'Making priority services accessible' })
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
+})
+
+app.get('/migrations', function (req, res, next) {
+  try {
+    var html = migrations({ title: 'Adding a major feature to an existing product' })
     res.send(html)
   } catch (e) {
     next(e)

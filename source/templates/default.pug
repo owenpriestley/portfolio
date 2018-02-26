@@ -15,23 +15,19 @@ body
       main.main
         block content
       aside.sidebar-second
-          span#hide Menu
-          div.nav-main
+          span#hide +
+          #nav-main
             .nav-head
               .green Projects
             ul.nav
               li
-                button.nav.cd(data-url="/benefits") Overhauling benefits advice
+                button(style="margin-top: 5%").nav.cd(data-url="/benefits") Creating user friendly benefits advice
               li
-                button.nav.cd(data-url="/benefits") Some other stuff
+                button.nav.cd(data-url="/priorityservices") Making services accessible
               li
-                button.nav.cd(data-url="/benefits") I did this awesome thing
+                button.nav.cd(data-url="/migrations") Adding a major feature to an existing product
               li
                 button.nav.cd(data-url="/benefits") Jackson's Corner
-              li
-                button.nav.cd(data-url="/benefits") What else?
-              li
-                button.nav.cd(data-url="/benefits") Dunno
       // right sidebar
       aside.sidebar-first
         header.header

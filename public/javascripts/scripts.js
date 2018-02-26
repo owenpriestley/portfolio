@@ -2,19 +2,25 @@
 
 // Site controls //
 $(document).ready(function() {
-    $("#hide").click(function( event ) {
-        $(".nav-main").animate({width:'toggle'},350);
-      });      
+    $("#nav-main").addClass("toggled");
+    $("#hide").html("&#8722;");
+    $("#hide").click(function(e) {
+        e.preventDefault();
+        if($("#nav-main").hasClass("toggled")) {
+            $("#nav-main").animate({"height": "47px"}).removeClass("toggled");
+            $("#hide").html("+");
+         } else {
+           $("#nav-main").animate({"height": "375px"}).addClass("toggled");
+           $("#hide").html("&#8722;");
+         }
+      });
+   
 
     $("#response").hide();
     $('.title').click(function( event ) {
         getContent('5a6341dbc443548d81bcf727');
         $("#responseIntro").css("display", "none");
         $("#responseTitle").css("padding-top", "0px")
-    });
-    $(".nav.hide").click(function( event ) {
-        $(this).parent().slideUp(400);
-        $("#responseTitle").css("padding-top", "0")
     });
 
     $(".nav button.nav").on('click', function(){
