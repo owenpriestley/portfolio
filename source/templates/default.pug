@@ -15,22 +15,19 @@ body
       main.main
         block content
       aside.sidebar-second
-        div.nav-main
-          .nav-head
-            .green Projects
-          ul.nav
-            li
-              button.nav.cd(data-url="/benefits") Overhauling benefits advice
-            li
-              button.nav.cd(data-contentid="5a7cc7ff720eea57b324d700") Working with migration scripts
-            li
-              button.nav.cd(data-contentid="5a7cc8afec53c057d12d9a3e") Filters in DLM Dashboard
-            li
-              button.nav.cd(data-contentid="5a7cd2db8cea835aabb790b0") Swatchify
-            li
-              button.nav.cd(data-contentid="5a7cd47ebd8cb05abf9acf02") OP-API
-            li
-              button.nav.cd(data-contentid="5a7ccbfdbb258c58080d3790") DNO Lookup
+          span#hide +
+          #nav-main
+            .nav-head
+              .green Projects
+            ul.nav
+              li
+                button(style="margin-top: 5%").nav.cd(data-url="/benefits") Creating user friendly benefits advice
+              li
+                button.nav.cd(data-url="/priorityservices") Making services accessible
+              li
+                button.nav.cd(data-url="/migrations") Adding a major feature to an existing product
+              li
+                button.nav.cd(data-url="/benefits") Jackson's Corner
       // right sidebar
       aside.sidebar-first
         header.header

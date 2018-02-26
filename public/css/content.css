@@ -34,9 +34,12 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 0.95em;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+}
+body p {
+  line-height: 2;
 }
 .note {
   padding-left: 7px;
@@ -50,19 +53,26 @@ body {
 h1 {
   margin: 0;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 3.5em;
   color: #000102;
   letter-spacing: 0.005em;
 }
-.introh1 {
-  font-size: 4em;
-  padding: 0;
+.h-intro {
+  font-size: 1.4em;
   font-weight: 700;
-  float: left;
-  padding-right: 10px;
   opacity: 0.9;
   letter-spacing: 0.005em;
-  color: #000;
+  color: rgba(0,1,2,0.8);
+}
+.h-body {
+  font-size: 3em;
+  font-weight: 700;
+  opacity: 0.9;
+  letter-spacing: 0.005em;
+  color: #0b486b;
+  margin-top: 2em;
+  padding-bottom: 0.2em;
+  border-bottom: 2px solid #0b486b;
 }
 h1,
 h2,
@@ -71,12 +81,12 @@ h3 {
 }
 h2 {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 2.5em;
   letter-spacing: 0.005em;
 }
 h3 {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: 0.005em;
 }
 a {
@@ -89,5 +99,12 @@ a:visited {
   color: #000;
 }
 a:hover {
-  color: #84cff6;
+  color: #0b486b;
+}
+p.inside {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #fff !important;
 }
