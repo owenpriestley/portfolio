@@ -79,7 +79,7 @@ header {
 .nav {
   font-size: 1em;
   color: #000102;
-  line-height: 220%;
+  line-height: 175%;
   list-style-type: none;
   text-align: right;
 }
@@ -176,12 +176,13 @@ button.nav:hover {
   box-sizing: border-box;
   float: left;
   margin-left: 2%;
+  padding-bottom: 20px;
 }
 .sml-column {
   border-left: dotted 1px #fff;
   width: 70%;
   float: right;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .sml-column h3 {
   padding-left: 20px;
@@ -215,4 +216,7 @@ button.nav:hover {
 .standout h3 {
   margin-left: 5px;
   margin-top: 0;
+}
+.inline {
+  border: solid 2px #0b486b;
 }

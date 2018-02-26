@@ -3,38 +3,13 @@ extend default
 block content
   div(id='content')
     span 
-      h1(class="h1") Adding a feature to an existing project
-      h2(class="h-intro") Last year, Citizens Advice helped over 560k people with their benefits problems
-      p I lead the team who designed #[a(href="https://www.citizensadvice.org.uk/benefits/help-if-on-a-low-income/") the online advice content] for Jobseeker's Allowance, Tax Credits and Income Support - among the most widely claimed benefits in the UK.
-      p Starting with 3 top level user needs, we developed a complete user journey to guide our clients through the complex processes of claiming benefits and challenging unfair decisions.
-      br
-    div(class="row")
-      div(class="column")
-        div(class="stat")
-          br
-          p Designed
-          h3 34
-          p pages of advice content
-        br
-        div(class="stat")
-          p Over
-          h3 465k
-          p page views in 2016/17
-      div(class="sml-column")
-        h3(class="h-intro") User needs
-        p.inside
-          ul
-            li As someone on a low income, I need to know which benefits I can claim, so I can improve my financial position
-            li As someone who wants to claim a benefit, I need to know how to apply, so I get my benefits as quickly as possible
-            li As someone who has had their benefits reduced or stopped, I need to know how I can challenge the decision, so I can get the benefits I'm entitled to
-    div(class="row")
-    h3(class="h-body") Same content #[br] Different users
-    p The Citizens Advice online content is designed to empower members of the public to solve problems themselves. But it also helps our advisers deal with more thorny issues in face-to-face advice sessions.
-    p To incorprate two user journeys into the same piece of content, we needed to build a detailed picture of our users. Working with our team's user researcher, we set out to identify common journeys on the site, and looked at how advisers approach different problems.
-    p #[a(href="https://wearecitizensadvice.org.uk/sprint-notes-16-feb-2017-fdab6a815bba") Read more on the Citizens Advice blog].
-
-    div(class="row")
-    h3(class="h-body" style="text-align: right") Testing benefits advice
-    p The Citizens Advice online content is designed to empower members of the public to solve problems themselves. But it also helps our advisers deal with more thorny issues in face-to-face advice sessions.
-    p To incorprate two user journeys into the same piece of content, we needed to build a detailed picture of our users. Working with our team's user researcher, we set out to identify common journeys on the site, and looked at how advisers approach different problems.
-    p #[a(href="https://wearecitizensadvice.org.uk/sprint-notes-16-feb-2017-fdab6a815bba") Read more on the Citizens Advice blog].
+      h1(class="h1") Improving database version control
+      h2(class="h-intro") SQL Source Control helps thousands of users version control their databases
+      p We added migration scripts to our product roadmap in response to #[a(href="https://redgate.uservoice.com/forums/39019-sql-source-control/suggestions/2299881-migrations-support-for-git-mercurial") over 1k requests on UserVoice].
+      p I joined the team to help document this process. It was a particularly challenging feature to document, as each user approaches the task with a different mental model, and often has a different understanding of when and how to use the feature. 
+      p I worked closely with the UX designer on the team to design and test workflows, and maintained a dialogue with users throughout the beta period - #[a(href="https://www.red-gate.com/simple-talk/blogs/how-weve-improved-migrations-in-sql-source-control-5/") find out more on the Redgate blog].
+      img(style="width: 100%" class="inline" src="/images/migration-scripts.png", alt="Working with migration scripts")
+      h3(class="h-body" style="margin-top: 10px") Guiding users with a new idea
+      p After remote testing sessions with dozens of users, we found that everyone used migration scripts for their own unique purposes. These were often processes we'd never considered, and hadn't designed the feature for.
+      p To help new and existing users understand the feature &mdash; and how it could help streamline their deployments &mdash; I worked with the team's developers to #[a(href="https://documentation.red-gate.com/soc5/common-tasks/working-with-migration-scripts/migration-script-examples") create and document example scripts].
+      p I also created #[a(href="https://www.youtube.com/watch?v=8cG-xrfWIKQ") a tutorial video] to walk users through a deployment using migration scripts.

@@ -34,6 +34,8 @@ app.set('view engine', 'pug')
 
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public/images'))
+
 
 app.get('/', function (req, res, next) {
   try {
