@@ -9,38 +9,31 @@ body
     script(src="/javascripts/markdown.min.js")
     
 .wrapper
-  header.header
-    .title OWEN PRIESTLEY
+  
   section.content
     .columns
       main.main
         block content
-      aside.sidebar-first
-        .nav-head
-          .green CONTENT DESIGN
-        ul.nav
-          li
-            button.nav.cd(data-contentid="5a63694f71ffe28dec84bcbe") Making sure your flat is fire safe
-          li
-            button.nav.cd(data-contentid="5a5e6179bf05985dcd5476dd") Complain to your energy supplier
-        .nav-head 
-          .orange TECHNICAL WRITING
-        ul.nav
-          li
-            button.nav.tw(data-contentid="5a7cc7ff720eea57b324d700") Working with migration scripts
-          li
-            button.nav.tw(data-contentid="5a7cc8afec53c057d12d9a3e") Filters in DLM Dashboard
-          li
-        .nav-head 
-          .blue WEB DEVELOPMENT
-        ul.nav
-          li
-            button.nav.wd(data-contentid="5a7cd2db8cea835aabb790b0") Swatchify
-          li
-            button.nav.wd(data-contentid="5a7cd47ebd8cb05abf9acf02") OP-API
-          li
-            button.nav.wd(data-contentid="5a7ccbfdbb258c58080d3790") DNO Lookup
-      // right sidebar
       aside.sidebar-second
+        div.nav-main
+          .nav-head
+            .green Projects
+          ul.nav
+            li
+              button.nav.cd(data-url="/benefits") Overhauling benefits advice
+            li
+              button.nav.cd(data-contentid="5a7cc7ff720eea57b324d700") Working with migration scripts
+            li
+              button.nav.cd(data-contentid="5a7cc8afec53c057d12d9a3e") Filters in DLM Dashboard
+            li
+              button.nav.cd(data-contentid="5a7cd2db8cea835aabb790b0") Swatchify
+            li
+              button.nav.cd(data-contentid="5a7cd47ebd8cb05abf9acf02") OP-API
+            li
+              button.nav.cd(data-contentid="5a7ccbfdbb258c58080d3790") DNO Lookup
+      // right sidebar
+      aside.sidebar-first
+        header.header
+          .title OP
   // footer space
   footer.footer

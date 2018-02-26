@@ -35,14 +35,16 @@
   display: table-cell;
   vertical-align: middle;
   font-size: 40px;
-  border: 6px solid #84cff6;
-  height: 60px;
-  width: 350px;
+  border: 6px solid #0b486b;
+  height: 2.5em;
+  width: 2.5em;
   text-align: center;
-  color: #84cff6;
+  color: #0b486b;
   text-rendering: optimizeLegibility;
+  transition: 0.3s;
 }
 .title:hover {
+  transition: 0.3s;
   opacity: 1;
   cursor: pointer;
 }
@@ -53,7 +55,6 @@
 }
 .header {
   height: 100px;
-  margin-top: 3%;
   margin-left: 5%;
 }
 .content {
@@ -65,18 +66,26 @@
   flex: 1;
 }
 .nav {
-  font-size: 13px;
+  font-size: 1em;
   color: #000102;
-  text-align: left;
-  padding-left: 10px;
-  line-height: 170%;
+  line-height: 220%;
   list-style-type: none;
 }
+.nav-main {
+  margin-right: 5%;
+  margin-top: 5%;
+  border-style: solid;
+  padding-right: 10%;
+  padding-top: 1em;
+  color: #0b486b;
+  border-width: 5px;
+  text-align: right;
+}
 .nav-head {
-  font-size: 15px;
+  font-size: 2em;
   font-weight: 700;
-  font-style: italic;
-  color: #e3a731;
+  letter-spacing: 0.005em;
+  text-align: right;
 }
 button.nav {
   border: none;
@@ -85,6 +94,7 @@ button.nav {
   padding: 0;
   cursor: pointer;
   text-rendering: optimizeLegibility;
+  background: no-repeat;
 }
 .hide {
   line-height: 2.5;
@@ -95,6 +105,8 @@ button.nav {
 }
 .nav .cd {
   outline: none;
+  border-bottom: #50a471 2px solid;
+  padding-top: 12px;
 }
 .nav .cd:hover {
   color: #50a471;
@@ -127,22 +139,37 @@ button.nav {
   order: 2;
   width: 60%;
   max-width: 60%;
+  padding-right: 5%;
+  padding-top: 3%;
 }
 .sidebar-first {
-  width: 20%;
-  order: 1;
-  margin-left: 5%;
-  padding-top: 8px;
+  width: 15%;
+  opacity: 0.6;
+  margin-top: 3%;
+  margin-left: 2%;
+  transition: 0.3s;
+}
+.sidebar-first:hover {
+  transition: 0.3s;
+  opacity: 1;
 }
 .nav li.selected {
   list-style: square;
 }
 .sidebar-second {
+  padding-top: 2%;
+  padding-right: 2%;
   color: #f3a551;
-  width: 20%;
+  width: 30%;
   order: 3;
-  margin-left: 5%;
-  padding-top: 8px;
+  opacity: 0.6;
+  height: 30%;
+  transition: 0.3s;
+}
+.sidebar-second:hover {
+  transition: 0.3s;
+  opacity: 1;
+  cursor: pointer;
 }
 #responseIntro {
   border-style: solid;

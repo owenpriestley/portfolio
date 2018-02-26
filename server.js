@@ -1,7 +1,10 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
+  
+  //pages
   , homepage = require('pug').compileFile(__dirname + '/source/templates/homepage.pug')
+  , benefits = require('pug').compileFile(__dirname + '/source/templates/benefits.pug')
 
 // API BUSINESS
 const MongoClient = require('mongodb').MongoClient;
@@ -32,6 +35,15 @@ app.use(express.static(__dirname + '/public'))
 app.get('/', function (req, res, next) {
   try {
     var html = homepage({ title: 'Home' })
+    res.send(html)
+  } catch (e) {
+    next(e)
+  }
+})
+
+app.get('/benefits', function (req, res, next) {
+  try {
+    var html = benefits({ title: 'Benefits' })
     res.send(html)
   } catch (e) {
     next(e)
