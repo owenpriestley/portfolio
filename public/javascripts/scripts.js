@@ -18,7 +18,7 @@ $(document).ready(function() {
 
     $("#response").hide();
     $('.title').click(function( event ) {
-        getContent('5a6341dbc443548d81bcf727');
+        window.location.href = "/";
         $("#responseIntro").css("display", "none");
         $("#responseTitle").css("padding-top", "0px")
     });
