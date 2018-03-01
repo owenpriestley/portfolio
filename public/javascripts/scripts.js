@@ -2,15 +2,15 @@
 
 // Site controls //
 $(document).ready(function() {
-    $("#nav-main").addClass("toggled");
-    $("#hide").html("&#8722;");
+    $("#nav-main").css("height", "47px");
+    $("#hide").html("+");
     $("#hide").click(function(e) {
         e.preventDefault();
         if($("#nav-main").hasClass("toggled")) {
             $("#nav-main").animate({"height": "47px"}).removeClass("toggled");
             $("#hide").html("+");
          } else {
-           $("#nav-main").animate({"height": "375px"}).addClass("toggled");
+           $("#nav-main").animate({"height": "310px"}).addClass("toggled");
            $("#hide").html("&#8722;");
          }
       });
@@ -50,43 +50,3 @@ $(document).ready(function() {
     })
     
 });
-
-function getContent(ID) {
-    // CLEAR CONTENT //
-    $("#response").hide();
-    $("#responseTitle").css("padding-top", "7%");
-    $("#responseTitle, #responseBody, #responseIntroBody").text("");
-
-    // TURN ID INTO API URL //
-    var mainURL = window.location.href
-    var get_fullURL = mainURL + 'content/' + ID;
-
-    // SEND GET REQUEST TO API //
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", get_fullURL, false);
-    xhttp.setRequestHeader("Content-type", "x-www-form-urlencoded");
-    xhttp.send();
-
-    // GET CONTENT AND SPLIT IT //
-    var response = JSON.parse(xhttp.responseText);
-
-    // PRINT INTRO TO DIV //
-    var introMarkup = markdown.toHTML(response.intro);
-    var splitIntro = introMarkup.split(/\n/);
-    var div = document.getElementById('responseIntroBody');
-    for (para of splitIntro) {
-        div.innerHTML += `<p>${para}</p>`;
-    }
-
-    // PRINT CONTENT TO DIV //
-    $("#responseIntro").css("border-style", "solid");
-    $("#responseTitle").text(response.title);
-    var bodyMarkup = markdown.toHTML(response.body);
-    var splitBody = bodyMarkup.split(/\n/);
-    var div = document.getElementById('responseBody');
-    for (para of splitBody) {
-        div.innerHTML += `<p>${para}</p>`;
-    }
-    $("#responseIntro").css("display", "block");
-    $("#response").fadeTo(700, 1);
-}
