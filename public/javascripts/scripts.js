@@ -1,5 +1,3 @@
-//TEST HIDING NAV: https://codepen.io/owiewio/pen/jZpvbe //
-
 // Site controls //
 $(document).ready(function() {
     $("#nav-main").css("height", "47px");
@@ -35,18 +33,4 @@ $(document).ready(function() {
         }
     })
 
-    $(".nav button.nav.wd").on('click', function(){
-        var listElement = $(this).parent();
-        var ID = $(this).data('contentid')
-        getContent(ID);
-        if ($(".nav li").hasClass('selected')){
-            $(".nav li").removeClass('selected');
-            listElement.addClass('selected');
-        } else {
-            listElement.addClass('selected');
-        }
-        $("#responseIntro").hide();
-        $("#responseBody").append("<p class='note'><strong class='notehead'>NOTE</strong></br>If it takes a while to load, the deployment is probably frozen. You'll just need to give it a moment to defrost.</p>");
-    })
-    
 });

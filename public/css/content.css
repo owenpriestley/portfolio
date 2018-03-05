@@ -37,6 +37,7 @@ body {
   font-size: 0.95em;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+  border-top: 5px solid rgba(243,165,81,0.749);
 }
 body p {
   line-height: 2;
