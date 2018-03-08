@@ -2,34 +2,30 @@ doctype html
 html
 body
   head
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     link(rel='stylesheet', href='/css/index.css')
     link(rel='stylesheet', href='/css/content.css')
     script(src="/javascripts/scripts.js")
     script(src="/javascripts/markdown.min.js")
     
-.wrapper
-  
-  section.content
-    .columns
-      main.main
-        block content
-      aside.sidebar-second
-          span#hide +
-          #nav-main
-            .nav-head
-              .green Projects
-            ul.nav
-              li
-                button(style="margin-top: 5%").nav.cd(data-url="/benefits") Creating user friendly benefits advice
-              li
-                button.nav.cd(data-url="/priorityservices") Designing a service for vulnerable consumers
-              li
-                button.nav.cd(data-url="/migrations") Improving database version control
-              br
-      // right sidebar
-      aside.sidebar-first
-        header.header
-          .title OP
-  // footer space
-  footer.footer
+article
+  div
+    block content
+  // right sidebar
+  aside
+    header.header
+      .title OP
+  footer
+      span#hide +
+      #nav-main
+        .nav-head
+          .green Projects
+        ul.nav
+          li
+            button(style="margin-top: 5%").nav.cd(data-url="/benefits") Creating user friendly benefits advice
+          li
+            button.nav.cd(data-url="/priorityservices") Designing a service for vulnerable consumers
+          li
+            button.nav.cd(data-url="/migrations") Improving database version control
+          br

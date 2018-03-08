@@ -1,14 +1,14 @@
 // Site controls //
 $(document).ready(function() {
-    $("#nav-main").css("height", "47px");
+    $("#nav-main").css("height", "65px");
     $("#hide").html("+");
     $("#hide").click(function(e) {
         e.preventDefault();
         if($("#nav-main").hasClass("toggled")) {
-            $("#nav-main").animate({"height": "47px"}).removeClass("toggled");
+            $("#nav-main").animate({"height": "65px"}).removeClass("toggled");
             $("#hide").html("+");
          } else {
-           $("#nav-main").animate({"height": "310px"}).addClass("toggled");
+           $("#nav-main").animate({"height": "350px"}).addClass("toggled");
            $("#hide").html("&#8722;");
          }
       });
