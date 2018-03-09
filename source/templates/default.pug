@@ -2,13 +2,19 @@ doctype html
 html
 body
   head
-    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-    link(rel='stylesheet', href='/css/index.css')
-    link(rel='stylesheet', href='/css/content.css')
-    script(src="/javascripts/scripts.js")
-    script(src="/javascripts/markdown.min.js")
-    
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-77674842-2")
+  meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  link(rel='stylesheet', href='/css/index.css')
+  link(rel='stylesheet', href='/css/content.css')
+  script(src="/javascripts/scripts.js")
+  script(src="/javascripts/markdown.min.js")
+  script.
+            window.dataLayer = window.dataLayer || []
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date())
+            gtag('config', 'UA-77674842-2')
+
 article
   div
     block content
