@@ -134,6 +134,9 @@ footer:hover {
   list-style-type: none;
   text-align: right;
 }
+.nav li:last-of-type button {
+  border: none;
+}
 .nav-head {
   font-size: 1.5em;
   font-weight: 700;
@@ -144,12 +147,12 @@ button.nav {
   border: none;
   text-decoration: none;
   color: #000102;
-  padding-bottom: 7px;
+  padding-bottom: 22px;
   cursor: pointer;
   text-rendering: optimizeLegibility;
   background: no-repeat;
   outline: none;
-  border-bottom: #50a471 2px solid;
+  border-bottom: #50a471 1px solid;
   margin-top: 10%;
 }
 button.nav:hover {
